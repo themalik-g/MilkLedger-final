@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:background="#2E7D32">
+            <TextView 
+                android:id="@+id/tvSessionInfo" 
+                android:layout_width="0dp" 
+                android:layout_weight="1" 
+                android:layout_height="wrap_content"
+                android:text="Milk Ledger" 
+                android:textColor="#FFFFFF" 
+                android:textSize="18sp" 
+                android:textStyle="bold" />
+            <TextView 
+                android:id="@+id/tvDate" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF" 
+                android:textSize="14sp" />
+            <Button 
+                android:id="@+id/btnPickDate" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:text="Date" 
+                android:textSize="10sp" 
+                android:layout_marginStart="8dp" 
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#2E7D32" 
+                android:minHeight="36dp" />
+        </LinearLayout>
+
+        <LinearLayout 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal" 
+            android:padding="8dp">
+            <TextView 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:text="Session:" 
+                android:textStyle="bold" />
+            <Spinner 
+                android:id="@+id/spinnerTime" 
+                android:layout_width="0dp" 
+                android:layout_weight="1" 
+                android:layout_height="wrap_content" 
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <RadioGroup 
+            android:id="@+id/rgEntryMode" 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:padding="8dp" 
+            android:gravity="center">
+            <RadioButton 
+                android:id="@+id/rbOneByOne" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:text="One by One" 
+                android:checked="true" />
+            <RadioButton 
+                android:id="@+id/rbBulk" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:text="Bulk Entry" 
+                android:layout_marginStart="16dp" />
+        </RadioGroup>
+
+        <ProgressBar 
+            android:id="@+id/progressBar" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" 
+            android:visibility="gone" />
+
+        <ScrollView 
+            android:id="@+id/scrollView" 
+            android:layout_width="match_parent" 
+            android:layout_height="0dp" 
+            android:layout_weight="1">
+            <LinearLayout 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" 
+                android:orientation="vertical">
+                <!-- One by One Mode -->
+                <LinearLayout 
+                    android:id="@+id/layoutOneByOne" 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" 
+                    android:padding="16dp">
+                    <TextView 
+                        android:id="@+id/tvSellerInfo" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"
+                        android:text="Seller Info" 
+                        android:textSize="18sp" 
+                        android:textStyle="bold" 
+                        android:textColor="#333333"
+                        android:layout_marginBottom="16dp" />
+                    <EditText 
+                        android:id="@+id/etLiters" 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content"
+                        android:hint="Liters" 
+                        android:inputType="numberDecimal" 
+                        android:padding="16dp"
+                        android:background="@android:drawable/edit_text" />
+                    <EditText 
+                        android:id="@+id/etRate" 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content"
+                        android:hint="Rate per Liter" 
+                        android:inputType="numberDecimal" 
+                        android:layout_marginTop="12dp"
+                        android:padding="16dp" 
+                        android:background="@android:drawable/edit_text" />
+                    <TextView 
+                        android:id="@+id/tvAmount" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"
+                        android:text="Amount: 0.00" 
+                        android:textSize="18sp" 
+                        android:textStyle="bold"
+                        android:textColor="#2E7D32" 
+                        android:layout_marginTop="12dp" />
+                    <Button 
+                        android:id="@+id/btnSameAsYesterday" 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content"
+                        android:text="Same as Yesterday" 
+                        android:layout_marginTop="12dp" 
+                        android:backgroundTint="#6A1B9A" 
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+                <!-- Bulk Mode -->
+                <LinearLayout 
+                    android:id="@+id/layoutBulk" 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" 
+                    android:padding="16dp" 
+                    android:visibility="gone">
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Bottom buttons - always visible above keyboard -->
+    <LinearLayout 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:padding="12dp" 
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:layout_gravity="bottom">
+        <Button 
+            android:id="@+id/btnSkip" 
+            android:layout_width="0dp" 
+            android:layout_weight="1" 
+            android:layout_height="wrap_content"
+            android:text="Skip" 
+            android:backgroundTint="#757575" 
+            android:textColor="#FFFFFF" />
+        <Button 
+            android:id="@+id/btnSaveNext" 
+            android:layout_width="0dp" 
+            android:layout_weight="1" 
+            android:layout_height="wrap_content"
+            android:text="Save &amp; Next" 
+            android:layout_marginStart="8dp" 
+            android:backgroundTint="#2E7D32" 
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

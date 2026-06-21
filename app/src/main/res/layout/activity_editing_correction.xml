@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="#2E7D32">
+        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:text="Edit / Correct Entries" android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold" />
+        <Button android:id="@+id/btnRefresh" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Refresh" android:textSize="10sp" android:backgroundTint="#FFFFFF" android:textColor="#2E7D32" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp">
+        <TextView android:id="@+id/tvDate" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:text="Date" android:textSize="16sp" />
+        <Button android:id="@+id/btnPickDate" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Change Date" android:textSize="10sp" android:backgroundTint="#1565C0" android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="center" android:visibility="gone" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+            <LinearLayout android:id="@+id/layoutEntries" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" />
+            <LinearLayout android:id="@+id/layoutCash" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

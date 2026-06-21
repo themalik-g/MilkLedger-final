@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+    <CheckBox android:id="@+id/cbSkip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tvBulkName" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+        android:textSize="14sp" android:layout_marginStart="4dp" />
+    <EditText android:id="@+id/etBulkLiters" android:layout_width="80dp" android:layout_height="wrap_content"
+        android:hint="Ltr" android:inputType="numberDecimal" android:textSize="14sp" android:padding="8dp"
+        android:background="@android:drawable/edit_text" />
+    <EditText android:id="@+id/etBulkRate" android:layout_width="80dp" android:layout_height="wrap_content"
+        android:hint="Rate" android:inputType="numberDecimal" android:textSize="14sp" android:padding="8dp"
+        android:layout_marginStart="4dp" android:background="@android:drawable/edit_text" />
+</LinearLayout>

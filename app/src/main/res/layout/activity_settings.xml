@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Settings" android:textSize="24sp" android:textStyle="bold" android:textColor="#2E7D32"
+        android:layout_marginBottom="24dp" />
+    <CheckBox android:id="@+id/cbUsePin" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Use PIN for login" android:layout_marginBottom="12dp" />
+    <EditText android:id="@+id/etNewPin" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="New PIN (4+ digits)" android:inputType="numberPassword" android:maxLength="6"
+        android:padding="16dp" android:background="@android:drawable/edit_text" />
+    <Button android:id="@+id/btnSavePin" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Save PIN Settings" android:layout_marginTop="16dp" android:backgroundTint="#2E7D32" android:textColor="#FFFFFF" />
+    <Button android:id="@+id/btnBack" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Back" android:layout_marginTop="12dp" android:backgroundTint="#555555" android:textColor="#FFFFFF" />
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Seller-wise Report" android:textSize="20sp" android:textStyle="bold" android:textColor="#2E7D32"
+        android:layout_marginBottom="16dp" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Select Seller:" android:textStyle="bold" />
+    <Spinner android:id="@+id/spinnerSeller" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" android:layout_marginBottom="12dp" />
+    <Button android:id="@+id/btnGenerate" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Generate Report" android:backgroundTint="#2E7D32" android:textColor="#FFFFFF" />
+    <TextView android:id="@+id/tvReport" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:layout_marginTop="12dp" android:padding="12dp" android:background="#FFFFFF" android:textSize="13sp"
+        android:fontFamily="monospace" android:scrollbars="vertical" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <Button android:id="@+id/btnShare" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:text="Share Text" android:backgroundTint="#2E7D32" android:textColor="#FFFFFF" android:textSize="11sp" />
+        <Button android:id="@+id/btnSharePdf" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:text="Share PDF" android:layout_marginStart="4dp" android:backgroundTint="#1565C0" android:textColor="#FFFFFF" android:textSize="11sp" />
+        <Button android:id="@+id/btnOpenPdf" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:text="Open PDF" android:layout_marginStart="4dp" android:backgroundTint="#6A1B9A" android:textColor="#FFFFFF" android:textSize="11sp" />
+        <Button android:id="@+id/btnBack" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:text="Back" android:layout_marginStart="4dp" android:backgroundTint="#555555" android:textColor="#FFFFFF" android:textSize="11sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reports"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginBottom="24dp" />
+    <Button android:id="@+id/btnDailyReport" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Daily Report" android:layout_marginBottom="12dp" android:backgroundTint="#2E7D32" android:textColor="#FFFFFF" />
+    <Button android:id="@+id/btnMonthlyReport" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Monthly Report" android:layout_marginBottom="12dp" android:backgroundTint="#1565C0" android:textColor="#FFFFFF" />
+    <Button android:id="@+id/btnSellerWiseReport" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Seller-wise Report" android:layout_marginBottom="12dp" android:backgroundTint="#6A1B9A" android:textColor="#FFFFFF" />
+    <Button android:id="@+id/btnBack" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Back" android:backgroundTint="#555555" android:textColor="#FFFFFF" />
+</LinearLayout>

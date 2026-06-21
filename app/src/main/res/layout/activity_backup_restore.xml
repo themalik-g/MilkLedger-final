@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Backup & Restore" android:textSize="24sp" android:textStyle="bold" android:textColor="#2E7D32"
+        android:layout_marginBottom="24dp" />
+    <Button android:id="@+id/btnBackup" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Manual Backup to Downloads" android:layout_marginBottom="12dp" android:backgroundTint="#2E7D32" android:textColor="#FFFFFF" />
+    <Button android:id="@+id/btnRestore" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Restore from Backup" android:layout_marginBottom="12dp" android:backgroundTint="#1565C0" android:textColor="#FFFFFF" />
+    <Button android:id="@+id/btnAutoBackup" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Enable Auto Backup" android:layout_marginBottom="24dp" android:backgroundTint="#6A1B9A" android:textColor="#FFFFFF" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Backups are saved to Downloads folder" android:textColor="#666666" android:textSize="12sp" />
+</LinearLayout>

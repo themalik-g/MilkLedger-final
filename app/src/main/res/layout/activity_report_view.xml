@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <TextView android:id="@+id/tvReport" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:padding="16dp" android:textSize="14sp" android:textColor="#333333"
+            android:fontFamily="monospace" android:background="#FFFFFF" />
+    </ScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="12dp" android:background="#FFFFFF" android:elevation="8dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btnShare" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="Share Text" android:backgroundTint="#2E7D32" android:textColor="#FFFFFF" android:textSize="12sp" />
+            <Button android:id="@+id/btnSharePdf" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="Share PDF" android:layout_marginStart="4dp" android:backgroundTint="#1565C0" android:textColor="#FFFFFF" android:textSize="12sp" />
+            <Button android:id="@+id/btnOpenPdf" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="Open PDF" android:layout_marginStart="4dp" android:backgroundTint="#6A1B9A" android:textColor="#FFFFFF" android:textSize="12sp" />
+        </LinearLayout>
+        <Button android:id="@+id/btnBack" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Back" android:layout_marginTop="8dp" android:backgroundTint="#555555" android:textColor="#FFFFFF" />
+    </LinearLayout>
+</LinearLayout>
