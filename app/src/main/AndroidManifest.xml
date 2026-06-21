@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.milkledger">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MilkLedger">
+
+        <!-- FileProvider for sharing PDFs -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RegisterActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SessionSetupActivity" android:exported="false" />
+        <activity android:name=".DashboardActivity" android:exported="false" />
+        <activity android:name=".CreateSellerActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SellersListActivity" android:exported="false" />
+        <activity android:name=".DailyEntryActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".CashTransactionActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".EditingCorrectionActivity" android:exported="false" />
+        <activity android:name=".ReportsMenuActivity" android:exported="false" />
+        <activity android:name=".DailyReportActivity" android:exported="false" />
+        <activity android:name=".MonthlyReportActivity" android:exported="false" />
+        <activity android:name=".SellerWiseReportActivity" android:exported="false" />
+        <activity android:name=".SellerLedgerActivity" android:exported="false" />
+        <activity android:name=".OldSellersActivity" android:exported="false" />
+        <activity android:name=".BackupRestoreActivity" android:exported="false" />
+        <activity android:name=".SettingsActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+
+    </application>
+</manifest>
